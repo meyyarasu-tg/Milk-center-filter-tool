@@ -1,27 +1,28 @@
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f3f4f6;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: start;
+  min-height: 100vh;
   margin: 0;
+  padding: 40px 20px;
 }
 
 .container {
   background-color: #fff;
   padding: 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
   width: 100%;
   text-align: center;
 }
 
 h2 {
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 24px;
+  color: #222;
+  font-size: 22px;
 }
 
 input[type="file"],
@@ -33,6 +34,7 @@ button {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 button {
@@ -40,8 +42,53 @@ button {
   color: white;
   border: none;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 button:hover {
   background-color: #45a049;
+}
+
+#newCodesList {
+  background: #f9fafb;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+#newCodesList ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#newCodesList li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#newCodesList select {
+  width: auto;
+  flex: 1;
+}
+
+#newCodesList button {
+  width: auto;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #3498db;
+}
+
+#newCodesList button:hover {
+  background-color: #2980b9;
 }
