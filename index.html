@@ -7,24 +7,26 @@
 </head>
 <body>
 
-<h2>Upload Excel or CSV & Download Filtered File by Center</h2>
+<div class="container">
+  <h2>Upload Excel or CSV & Download Filtered File by Center</h2>
 
-<input type="file" id="inputFile" />
-<br><br>
+  <input type="file" id="inputFile" />
+  <br><br>
 
-<label for="centerSelect">Select Center:</label>
-<select id="centerSelect">
-  <option value="">--Choose a Center--</option>
-  <option value="Main">Main Center</option>
-  <option value="Center 1">Center 1</option>
-  <option value="Center 2">Center 2</option>
-  <option value="Center 3">Center 3</option>
-  <option value="Center 4">Center 4</option>
-  <option value="Center 5">Center 5</option>
-</select>
-<br><br>
+  <label for="centerSelect">Select Center:</label>
+  <select id="centerSelect">
+    <option value="">--Choose a Center--</option>
+    <option value="Main">Main Center</option>
+    <option value="Center 1">Center 1</option>
+    <option value="Center 2">Center 2</option>
+    <option value="Center 3">Center 3</option>
+    <option value="Center 4">Center 4</option>
+    <option value="Center 5">Center 5</option>
+  </select>
+  <br><br>
 
-<button onclick="filterAndDownload()">Download Filtered File</button>
+  <button onclick="filterAndDownload()">Download Filtered File</button>
+</div>
 
 <script>
   const centers = {
@@ -66,9 +68,7 @@
       XLSX.utils.book_append_sheet(newWorkbook, newSheet, "Filtered");
 
       const extension = file.name.split('.').pop().toLowerCase();
-      
-    const filename = `${centerKey}.${extension}`;
-    
+      const filename = `${centerKey}.${extension}`;
 
       if (extension === "csv") {
         const csvData = XLSX.utils.sheet_to_csv(newSheet);
