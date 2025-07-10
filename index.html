@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Filter & Download Member Data by Center</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
@@ -67,15 +67,7 @@
 
       const extension = file.name.split('.').pop().toLowerCase();
       
-    const centerNames = {
-      A: "Main",
-      B: "Centre 1",
-      C: "Centre 2",
-      D: "Centre 3",
-      E: "Centre 4",
-      F: "Centre 5"
-    };
-    const filename = `${centerNames[centerKey]}.${extension}`;
+    const filename = `${centerKey}.${extension}`;
     
 
       if (extension === "csv") {
